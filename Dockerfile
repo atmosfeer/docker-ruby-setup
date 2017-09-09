@@ -41,7 +41,7 @@ RUN gem install rubocop
 
 
 # Add configuration files
-ADD ./ruby-challenges /home/challenges
+VOLUME ./ruby-challenges /home/lewagon-challenges
 # ADD ./config/.tmux.conf /root/.tmux.conf
 
 WORKDIR /home/challenges
