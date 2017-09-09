@@ -35,11 +35,13 @@ RUN  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /home/.o
 
 # Install Ruby Gems
 
-RUN gem install rspec rubocop pry pry-byebug colored
+RUN gem install rspec pry pry-byebug colored
+RUN gem install rainbow -v 2.1.0
+RUN gem install rubocop
 
 
 # Add configuration files
-ADD ./ruby-workshop /home/challenges
+ADD ./ruby-challenges /home/challenges
 # ADD ./config/.tmux.conf /root/.tmux.conf
 
 WORKDIR /home/challenges
