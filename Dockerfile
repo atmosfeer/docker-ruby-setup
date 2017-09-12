@@ -39,5 +39,5 @@ RUN gem install rspec pry pry-byebug colored
 RUN gem install rainbow -v 2.1.0
 RUN gem install rubocop
 
-WORKDIR ~/code/lewagon-workshop/lewagon-challenges
+WORKDIR ~/code/lewagon-weekend-workshop
 CMD ["zsh"]
