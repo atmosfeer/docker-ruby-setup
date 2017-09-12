@@ -39,10 +39,5 @@ RUN gem install rspec pry pry-byebug colored
 RUN gem install rainbow -v 2.1.0
 RUN gem install rubocop
 
-
-# Add configuration files
-# VOLUME /lewagon-challenges
-# ADD ./config/.tmux.conf /root/.tmux.conf
-
-WORKDIR /lewagon-challenges
+WORKDIR ~/code/lewagon-workshop/lewagon-challenges
 CMD ["zsh"]
