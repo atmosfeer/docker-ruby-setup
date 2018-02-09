@@ -38,5 +38,5 @@ RUN gem install rspec pry pry-byebug colored
 RUN gem install rainbow -v 2.1.0
 RUN gem install rubocop
 
-WORKDIR ~/code/wondercoders-ruby-challenges
+WORKDIR /wondercoders-ruby-challenges
 CMD ["zsh"]
