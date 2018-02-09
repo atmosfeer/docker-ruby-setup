@@ -26,11 +26,11 @@ RUN apt-get update && \
 
 # Install Zsh
 RUN git clone git://github.com/atmosfeer/oh-my-zsh.git ~/.oh-my-zsh \
-      && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc \
-      && chsh -s /bin/zsh
+    && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /home/.oh-my-zsh/plugins/zsh-syntax-highlighting \
+    && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc \
+    && chsh -s /bin/zsh
 
 # Install Zsh Syntax Highlighting
-RUN  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /home/.oh-my-zsh/plugins/zsh-syntax-highlighting
 
 # Install Ruby Gems
 
