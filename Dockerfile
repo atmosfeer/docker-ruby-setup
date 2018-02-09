@@ -30,13 +30,11 @@ RUN git clone git://github.com/atmosfeer/oh-my-zsh.git ~/.oh-my-zsh \
     && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc \
     && chsh -s /bin/zsh
 
-# Install Zsh Syntax Highlighting
-
 # Install Ruby Gems
 
 RUN gem install rspec pry pry-byebug colored
 RUN gem install rainbow -v 2.1.0
 RUN gem install rubocop
 
-WORKDIR /wondercoders-ruby-challenges
+WORKDIR /lewagon-challenges
 CMD ["zsh"]
