@@ -25,15 +25,12 @@ RUN apt-get update && \
 
 
 # Install Zsh
-RUN git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh \
+RUN git clone git://github.com/atmosfeer/oh-my-zsh.git ~/.oh-my-zsh \
       && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc \
       && chsh -s /bin/zsh
 
 # Install Zsh Syntax Highlighting
-RUN  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /home/.oh-my-zsh/plugins/zsh-syntax-highlighting \
-    # Delete this line if plugins don't load properly
-    && sed -i '62,63d' ~/.zshrc \
-    && sed -i 's/^plugins=.*/plugins=(ruby zsh-syntax-highlighting)/' ~/.zshrc
+RUN  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /home/.oh-my-zsh/plugins/zsh-syntax-highlighting
 
 # Install Ruby Gems
 
